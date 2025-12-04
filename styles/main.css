@@ -5,6 +5,22 @@
         Date Tested:    
 */
 /* Comment Header: BAM's Bicycles Main CSS */
+/* Embedded local font setup */
+@font-face {
+    font-family: "SourceSerif4";
+    src: url("font/SourceSerif4Caption-ExtraLight.ttf") format("truetype");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "SourceSerif4";
+    src: url("font/SourceSerif4Caption-ExtraLight.ttf") format("truetype");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "SourceSerif4";
+    src: url("font/SourceSerif4Caption-ExtraLight.ttf") format("truetype");
+    font-style: italic;
+}
 
 
 @media only screen and (max-width: 2024px) { 
@@ -52,7 +68,7 @@ body {
     width: 90%;                         /* changed from 725px;*/
     max-width: 1024px;
     background-color: lightgrey;      /*Set background color*/
-    
+    font-family: "SourceSerif4", "Times New Roman", serif;
 }
 
 /*h1 - h6 for further expansion*/
