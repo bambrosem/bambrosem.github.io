@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+ <!--
+    Made by:        Ben Morgan
+    Organisation:   SIU Carbondale
+    Date Made:      11/10/2025
+    Date edited:    
+    Date Tested:    
+ -->
+
+<html lang="en-US">
+    <head> 
+        <meta charset="utf-8">
+        <title>Profesnailna Wbesite: Ben Mogan</title> 
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/slicknav.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+        <script src="js/jquery.slicknav.min.js"></script>
+        <script type="text/javascript"> 
+            $(document).ready(function(){
+                $('#nav_menu').slicknav({prependTo:"#mobile_menu"}); 
+            }); 
+        </script>
+        <meta name="description" content="A website about Ben Morgan"> <meta name="keywords" content="About A Ben Morgan">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <header>
+        
+    </header>
+    <nav id="mobile_menu"></nav> 
+        <nav id="nav_menu"> 
+            <ul>
+                <li><a href="index.htm"                     >Home</a></li> 
+                <li><a href="workxp.htm"                    >WorkXp</a></li> 
+                <li><a href="interests.htm"                 >Interests</a></li>
+                <li><a href="academicaccomplishments.htm"   >Accomplishments</a></li> 
+                <li><a href="education.htm"                 >Education </a> </li>
+                <li><a href="contact.htm" class="current"   >Contact</a></li>
+            </ul> 
+    </nav>
+    </body>
+
+    <main>
+        <h1>Contact</h1>
+        <br>
+        <h2>You may contact me via email or the form below.</h2>
+        <p>Email: benjamin.a.morgan@siu.edu</p>
+        <br>
+        <br>
+        
+        <p> 
+                <form name="SendUsNothing" action="surveydata.html" method="get">
+
+                    <h2>Contact information</h2>
+                    <label for="email">Email address:</label>
+                    <input type="email" name="email" id="email" required><br>
+                    <label for="password">Enter Password</label>
+                    <input type="password" name="password" id="password" minlength="16" placeholder="Enter Password" required> <br>
+                    <label for="name">Full name:</label>
+                    <input type="text" name="name" id="name" minlength="8"required><br> 
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address" required><br>
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city" required><br>
+
+                    <label for="state">State</label>
+                    <select id="state">
+                        <optgroup label="pick your state">
+                        
+                        <option value="AL">Alabama</option><br>
+                        <option value="AK">Alaska</option><br>
+                        <option value="AR">Arkansas</option><br>
+                        <option value="AS">American Samoa</option><br>
+                        <option value="CA">California</option><br>
+                        <option value="CO">Colorado</option><br>
+                        <option value="CT">Connecticut</option><br>
+                        <option value="DE">Delaware</option><br>
+                        <option value="DC">District of Columbia</option><br>
+                        <option value="FL">Florida</option><br>
+                        <option value="GA">Georgia</option><br>
+                        <option value="GU">Guam</option><br>
+                        <option value="HI">Hawaii</option><br>
+                        <option value="ID">Idaho</option><br>
+                        <option value="IL">Illinois</option><br>
+                    </select> <br>
+                    <br>
+                    <label for="ZIP">Zip</label>
+                    <input type="text" name="ZIP" id="Zip" required pattern="\d{5}" placeholder="#####"> <br>
+                    <label for="Phone number">Phone Number</label>
+                    <input type="text" name="Phone number" required pattern="\d{10}"  placeholder="##########"> <br>
+                    <label for="Todays date">Today's date</label>
+                    <input type="date" name="Todays date" id="date"  required> <br>
+                    <label for="message">Message</label>
+                       <textarea name="message" id="message" minlength="50" maxlength="200"></textarea><br> 
+                    <br>
+                    <label for="type"> Type of Inquiry</label> <br>
+                    <fieldset>
+                        <div class="form-group options">
+                            Specify 1 or more types of reason:<br>
+                            <div class="col-md-6">
+                                <br>
+                                <input type="checkbox" name="type" value="sales" required /> Communicate<br>
+                                <input type="checkbox" name="type" value="service" required /> Employment<br>
+                                <input type="checkbox" name="type" value="rentals" required /> Other <br>
+                                <!-- Java Checkbox helper, because checkboxes don't work in groups like radio buttons, in order to ensure that at least one is checked -->
+                                <script >
+                                    $(function(){
+                                        var requiredCheckboxes = $('.options :checkbox[required]');
+                                        requiredCheckboxes.change(function(){
+                                            if(requiredCheckboxes.is(':checked')) {
+                                                requiredCheckboxes.removeAttr('required');
+                                            } else {
+                                                requiredCheckboxes.attr('required', 'required');
+                                            }
+                                        });
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <!-- Radio buttons will require as a group and must check one -->
+                        <div class="form-group options">
+                            How you found me:<br>
+                            <div class="col-md-6">
+                                <br>
+                                <input type="radio" name="type" value="mountain" required />Online<br>
+                                <input type="radio" name="type" value="road" />Recommendation<br>
+                                <input type="radio" name="type" value="both" />Both<br>
+                                <input type="radio" name="type" value="other" />Other<br>
+                            </div>
+                        </div>
+                    </fieldset>
+                        <!-- Submit goes to process page: surveydata -->
+                        <legend>Submit Your Message</legend><br>
+                        <br>
+                        <input type="submit" id="submit" value="Send"><br>
+                        <input type="reset" id="reset" value="Reset"><br>
+
+
+                </form>
+            </p>
+    </main>
+</html>
